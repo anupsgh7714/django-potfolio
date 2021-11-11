@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %} Projects {% endblock %}
+
+{% block heading %} Projects {% endblock %}
+
+
+{% block content %}
+
+{% for data in project_data %}
+<div class="box">
+    <img src="/media/{{data.project_img}}" alt="{{data.project_title_slug}}" >
+    <h3>{{data.project_title}}</h3>
+    <p>{{data.project_desc}}</p>
+    <button type="button" class="btn"><a href="{{data.project_link}}">Link</a></button>
+</div>
+{% endfor %}
+
+{% endblock %}
